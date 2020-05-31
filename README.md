@@ -26,7 +26,7 @@ docker pull andrei0686/visual-studio-linux-build-box:latest
  
 Для запуска контейнера сборки необходимо выполнить
  ```sh
- docker run -d -p 12345:22 --security-opt seccomp:unconfined ducatel/visual-studio-linux-build-box
+ docker run -d -p 12345:22 --security-opt seccomp:unconfined andrei0686/visual-studio-linux-build-box
  ```
 
 ### Как подключиться Visual Studio
@@ -48,7 +48,8 @@ You can extends the build image to include some dependencies.
 For example, the mongo-c driver
 
 ```Dockerfile
-FROM ducatel/visual-studio-linux-build-box
+FROM 
+/visual-studio-linux-build-box
 
 RUN apt-get update && \
     apt-get install -y libxml2-dev pkg-config libssl-dev libsasl2-dev automake autoconf libtool && \
