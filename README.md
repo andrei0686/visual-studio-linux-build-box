@@ -17,14 +17,17 @@ The official Microsoft tutorial [Visual C++ for Linux Development](https://blogs
  The image expose an SSH server on port 22. The credential is:
 
 * Login `root`
-* password `toor`
+* password `root`
 
-So to launch the build box, execute this command on your linux docker host
+Получить контейнер из репозитория
+docker pull andrei0686/visual-studio-linux-build-box:latest
+
+Для запуска контейнера сборки необходимо выполнить
  ```sh
  docker run -d -p 12345:22 --security-opt seccomp:unconfined ducatel/visual-studio-linux-build-box
  ```
 
-### How connect to your Visual Studio
+### Как подключиться Visual Studio
 
 On your Visual Studio go to `Tools > Options > Cross Platform > Linux` and enter the credential
 
