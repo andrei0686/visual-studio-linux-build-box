@@ -10,18 +10,20 @@ This image is used to allows Visual Studio to build a Linux application.
 The official Microsoft tutorial [Visual C++ for Linux Development](https://blogs.msdn.microsoft.com/vcblog/2016/03/30/visual-c-for-linux-development/).
 
 
-## How to use it
+## Как это использовать
  
- ### How launch the build box
+ ### Как получить образ сборки
 
- The image expose an SSH server on port 22. The credential is:
+ Образ предоставляет SSH-сервер через порт 22.
 
 * Login `root`
 * password `root`
 
 Получить контейнер из репозитория
+```sh
 docker pull andrei0686/visual-studio-linux-build-box:latest
-
+ ```
+ 
 Для запуска контейнера сборки необходимо выполнить
  ```sh
  docker run -d -p 12345:22 --security-opt seccomp:unconfined ducatel/visual-studio-linux-build-box
